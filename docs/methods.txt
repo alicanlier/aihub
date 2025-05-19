@@ -1,0 +1,54 @@
+
+    METHODS:
+    1. get_file_list(dir_path)
+    2. get_dir_list(dir_path)
+    3. get_file_dir_list(dir_path)  
+    4. ask_move_dir_content(dir_path)
+       move_item(item_path, new_dir_path)
+    5. ask_move_item(dir_path, new_dir_path) 
+       remove_item(item_path)
+    6. ask_remove_item(item_path)
+       copy_item(item_path, new_dir_path)
+    7. ask_copy_item(item_path, new_dir_path)
+       rename(item_path, new_name)
+    8. rename_by_item_name(dir_path, item_name, new_name)
+    9. rename_move(dir_path, item_name, new_dir_path, new_name)
+    A. rename_all_by_tag(dir_path, tag)
+
+    B. rename_by_removing_tag(item_path, tag)
+    C. rename_all_by_removing_tag(dir_path, tag)
+
+    D. ask_search_rename(dir_path)  
+    E.  ask_search_all_rename(root_path) 
+        search_dir_for_word(dir_path, word)
+    F.  ask_search_dir_for_word(dir_path)
+        search_all_for_word(root_dir, word)
+    G. ask_search_all_for_word (root_dir)
+        ask_for_print(result_list)
+        correct_path(path)
+    H. create(dir_path)
+    I.  search_within_file(file_path, word)
+    J.  help
+
+    METHODS:
+    1. get_file_list(dir_path)  # returns a list of tuples (dir_path, item_name, type) for files
+    2. get_dir_list(dir_path)  # returns a list of tuples (dir_path, item_name, type) for subdirs
+    3. get_content_list(dir_path)  # returns a list of tuples (dir_path, item_name, type) for subdirs & files 
+    4. ask_move_dir_content(dir_path, new_dir_path)  # asks if whole content/only folders/only files to move
+    5. ask_move_item(dir_path, new_dir_path)  # asks for file/folder name input within the method (enter either of 5/move)
+    6. ask_remove_item(item_path)  # asks whether to remove whole folder or just its content (enter either of 6/remove/delete)
+    7. ask_copy_item(item_path, new_dir_path)  # asks to copy whole folder or just the content/asks whether to rename the file when copying (enter either of 7/copy)
+    8. rename_by_item_name(dir_path, item_name, new_name)  # asks for item name (file/folder) to rename (enter either of 8/rename)
+    9. rename_move(dir_path, item_name, new_dir_path, new_name)
+    A. rename_all_by_tag(dir_path, tag)  # appends the given tag to all files and primary subdirs within the given directory
+    B. rename_by_removing_tag(item_path, tag)  # removes the given tag (substring) from the name of the given file/folder (renaming)
+    C. rename_all_by_removing_tag(dir_path, tag)  # removes the given tag (substring) from names of all contents of the given directory (renaming)
+    D. ask_search_rename(dir_path)  # asks for file/folder name to search in the given directory, then asks for new name for the matching item
+    E. ask_search_all_rename(root_path)  # asks for file/folder name to search in the given directory & its all levels subdirs, then asks for new name for each item
+    F. ask_search_dir_for_word(dir_path)  # asks for keyword to search in the given directory, returns a list of tuples (dir_path, item_name, type)
+    G. ask_search_all_for_word (root_dir)   # asks for keyword to search in the given directory & its all levels subdirs, returns a list of tuples (dir_path, item_name, type)
+    H. help (enter either of h/H/help)
+    I. search_within_file (file_path, word)  # searches for the given keyword within txt, csv & word files/returns the least word count
+    J. change the directory path you are working on (enter either of j/J/change)
+    K. create(dir_path)  # creates file or folder or folder/subfolder (enter either of k/K/create)
+    0. exit
